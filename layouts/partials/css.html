@@ -1,6 +1,0 @@
-<link rel="stylesheet" href="{{ "css/phb.css" | relURL }}">
-{{ $css := resources.Get "css/main.css" }}
-{{ $css = $css | css.TailwindCSS }}
-{{ with $css }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
