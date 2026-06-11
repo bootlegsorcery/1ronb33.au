@@ -1,0 +1,9 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "The Chef's Compendium"
+
+[params]
+  subtitle = "A blog following the culinary adventures of 1RON and B33 from the Material Plane to the Astral Sea."
+
+[build]
+  writeStats = true
