@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The Chef&#39;s Compendium</title>
-    <link>https://1ronb33.au/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on The Chef&#39;s Compendium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1ronb33.au/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Sundered Crown</title>
-      <link>https://1ronb33.au/posts/the-sundered-crown/</link>
+      <link>http://localhost:1313/posts/the-sundered-crown/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://1ronb33.au/posts/the-sundered-crown/</guid>
+      <guid>http://localhost:1313/posts/the-sundered-crown/</guid>
       <description>&lt;h2 id=&#34;prologue&#34;&gt;Prologue&lt;/h2&gt;&#xA;&lt;p&gt;In the &lt;strong&gt;Third Age of Elendir&lt;/strong&gt;, the High Kingdom fell not to blade or sorcery — but to its own ambition. King Theodric IV, desperate to bind the seven warring duchies under one banner, commissioned the forging of a crown from the shards of a fallen star.&lt;/p&gt;&#xA;&lt;p&gt;The &lt;em&gt;Aurelian Crown&lt;/em&gt; granted its wearer the strength of ten men and the wisdom of the ancients. But star-metal remembers. It thirsts.&lt;/p&gt;</description>
     </item>
   </channel>
