@@ -3,14 +3,12 @@
     "tags": [
       "a",
       "article",
-      "blockquote",
       "body",
-      "br",
       "div",
-      "em",
       "h1",
       "h2",
       "h3",
+      "h4",
       "head",
       "hr",
       "html",
@@ -18,10 +16,15 @@
       "li",
       "link",
       "meta",
+      "ol",
       "p",
-      "script",
-      "strong",
+      "table",
+      "tbody",
+      "td",
+      "th",
+      "thead",
       "title",
+      "tr",
       "ul"
     ],
     "classes": [
@@ -32,11 +35,9 @@
       "wide"
     ],
     "ids": [
-      "house-rules",
-      "p1",
-      "prologue",
-      "the-present",
-      "the-shattering"
+      "ingredients",
+      "instructions",
+      "p1"
     ]
   }
 }

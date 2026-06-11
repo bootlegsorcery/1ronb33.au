@@ -8,33 +8,23 @@
 
   <div style="margin-top:40px;">
     <h2 style="border-bottom:2px solid #58180D;">Who Are You?</h2>
-    <p>Welcome, weary traveller. We are 1RON and B33 — two culinary explorers charting a course across the planes in search of legendary flavors. From the smoky taverns of the material plane to the ethereal banquet halls of the astral sea, every meal tells a story.</p>
-    <p>This compendium is our journal: a collection of recipes, reviews, and tales from our adventures. Pull up a chair, pour yourself a flagon, and join us.</p>
+    <p>Welcome, weary traveller. We are 1RON and B33 — two culinary explorers charting a course across the planes in search of legendary flavors. From the smoky taverns of the material plane to the ethereal banquet halls of the astral sea, every meal tells a story. This compendium is our journal: a collection of recipes and reviews from our adventures. Pull up a chair, pour yourself a flagon, and join us.</p>
  </div>
 
   <div class="wide" style="margin-top:60px;">
     <h2 style="border-bottom:2px solid #58180D;">Table of Contents</h2>
     <div class="toc">
-      <h3 style="margin-top:20px;margin-bottom:8px;">Lore</h3>
-      {{ $lore := where .Site.RegularPages "Type" "lore" }}
-      {{ if $lore }}
-        <ul>
-          {{ range $lore }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      {{ else }}
-        <p><em>No lore yet. The archives are silent.</em></p>
-      {{ end }}
-
       <h3 style="margin-top:20px;margin-bottom:8px;">Reviews</h3>
-      {{ $reviews := where .Site.RegularPages "Section" "reviews" }}
-      {{ if $reviews }}
+      {{ $reviews := .Site.GetPage "/reviews" }}
+      {{ if $reviews.Pages }}
+        {{ range $reviews.Pages }}
+        <h4 style="margin-top:12px;margin-bottom:4px;">{{ .Title }}</h4>
         <ul>
-          {{ range $reviews }}
+          {{ range .Pages }}
           <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
+        {{ end }}
       {{ else }}
         <p><em>No reviews yet. The quest continues.</em></p>
       {{ end }}

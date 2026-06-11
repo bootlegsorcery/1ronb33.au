@@ -665,6 +665,24 @@ body {
   font-size: 11pt !important;
 }
 
+.phb table th:first-child,
+  .phb table td:first-child {
+  width: 11em;
+  white-space: nowrap;
+}
+
+.phb table th:nth-child(2),
+  .phb table td:nth-child(2) {
+  width: 4em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.phb table th:nth-child(3),
+  .phb table td:nth-child(3) {
+  width: auto;
+}
+
 .phb hr {
   visibility: hidden;
 }
@@ -676,6 +694,14 @@ body {
   -moz-column-break-after: auto !important;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .block {
   display: block;
+}
+
+.table {
+  display: table;
 }

@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on The Chef&#39;s Compendium</title>
-    <link>https://example.org/reviews/</link>
+    <link>https://1ronb33.au/reviews/</link>
     <description>Recent content in Reviews on The Chef&#39;s Compendium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://1ronb33.au/reviews/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

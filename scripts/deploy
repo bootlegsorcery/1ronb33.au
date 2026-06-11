@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# Manual deployment script: builds Hugo site and pushes to gh-pages
+set -euo pipefail
+
+REPO_DIR="$(git rev-parse --show-toplevel)"
+PUBLIC_DIR="$REPO_DIR/public"
+BRANCH="gh-pages"
+REMOTE="${1:-origin}"
+
+echo "🔨 Building site with Hugo..."
+hugo --source "$REPO_DIR"
+
+if [ ! -f "$PUBLIC_DIR/index.html" ]; then
+  echo "❌ Build failed: public/index.html not found."
+  exit 1
+fi
+
+# Use git worktree to avoid switching branches in the working dir
+echo "📦 Updating $BRANCH branch..."
+if git worktree list | grep -q "$REPO_DIR/.gh-pages-worktree"; then
+  cd "$REPO_DIR/.gh-pages-worktree"
+  git reset --hard HEAD
+  git fetch "$REMOTE" "$BRANCH"
+  git reset --hard "$REMOTE/$BRANCH"
+else
+  git worktree add "$REPO_DIR/.gh-pages-worktree" "$BRANCH"
+  cd "$REPO_DIR/.gh-pages-worktree"
+fi
+
+# Clear old content and copy new build
+find . -maxdepth 1 -not -name '.' -not -name '.git' -exec rm -rf {} +
+cp -r "$PUBLIC_DIR/"* "$PUBLIC_DIR/".?* . 2>/dev/null || true
+
+# Add and commit
+git add -A
+if git diff --cached --quiet; then
+  echo "✅ No changes to deploy."
+else
+  COMMIT_HASH=$(git -C "$REPO_DIR" rev-parse --short HEAD)
+  git commit -m "Deploy from main@$COMMIT_HASH"
+
+  echo "🚀 Pushing to $REMOTE/$BRANCH..."
+  git push "$REMOTE" "$BRANCH"
+  echo "✅ Deployed successfully!"
+fi
+
+cd "$REPO_DIR"
+git worktree remove "$REPO_DIR/.gh-pages-worktree" 2>/dev/null || true
