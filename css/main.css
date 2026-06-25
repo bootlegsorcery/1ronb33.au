@@ -555,143 +555,129 @@ video {
 }
 
 body {
-  background-color: #2e2212;
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.phb {
-  width: 100% !important;
-  max-width: none !important;
-  height: auto !important;
-  min-height: 279.4mm;
-  overflow: visible !important;
-  column-count: 1 !important;
-  -webkit-column-count: 1 !important;
-  -moz-column-count: 1 !important;
-  column-width: auto !important;
-  -webkit-column-width: auto !important;
-  -moz-column-width: auto !important;
-  font-size: .40cm !important;
+.memorial {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-.phb h1 {
-  column-span: none !important;
-  -webkit-column-span: none !important;
-  -moz-column-span: none !important;
-  font-size: 1.2cm !important;
-}
-
-.phb h2 {
-  font-size: .88cm !important;
-}
-
-.phb h3 {
-  font-size: .66cm !important;
-}
-
-.phb h4 {
-  font-size: .57cm !important;
-}
-
-.phb h5 {
-  font-size: .53cm !important;
-}
-
-.phb h1+p::first-letter {
-  float: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  line-height: inherit;
-}
-
-.phb li,
-  .phb ul,
-  .phb ol {
-  font-size: .40cm !important;
-  line-height: 1.5em !important;
-}
-
-.phb blockquote p,
-  .phb blockquote ul,
-  .phb hr+blockquote ul {
-  font-size: .40cm !important;
-  line-height: 1.5em !important;
-}
-
-.phb .footnote {
-  font-size: 1em !important;
-}
-
-.phb .pageNumber {
-  font-size: 1.1em !important;
-}
-
-.phb .wide {
-  column-span: none !important;
-  -webkit-column-span: none !important;
-  -moz-column-span: none !important;
-}
-
-.phb .toc a {
-  font-size: 1.1em !important;
-}
-
-.phb .toc ul {
-  list-style-type: disc !important;
-  padding-left: 1.5em !important;
-}
-
-.phb .spellList {
-  column-count: 2 !important;
-  -webkit-column-count: 2 !important;
-  -moz-column-count: 2 !important;
-  column-span: none !important;
-  -webkit-column-span: none !important;
-  -moz-column-span: none !important;
-}
-
-.phb .spellList p,
-  .phb .spellList ul {
-  font-size: .40cm !important;
-}
-
-.phb .classTable {
-  column-span: none !important;
-  -webkit-column-span: none !important;
-  -moz-column-span: none !important;
-}
-
-.phb table {
-  font-size: 11pt !important;
-}
-
-.phb table th:first-child,
-  .phb table td:first-child {
-  width: 11em;
-  white-space: nowrap;
-}
-
-.phb table th:nth-child(2),
-  .phb table td:nth-child(2) {
-  width: 4em;
-  white-space: nowrap;
+.memorial-container {
+  max-width: 700px;
+  width: 100%;
   text-align: center;
+  padding: 60px 40px;
+  border: 1px solid #444;
+  background: #1a1a1a;
 }
 
-.phb table th:nth-child(3),
-  .phb table td:nth-child(3) {
-  width: auto;
+.avatar-wrapper {
+  margin-bottom: 40px;
 }
 
-.phb hr {
-  visibility: hidden;
+.memorial-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
+  display: inline-block;
+  filter: grayscale(100%);
+  border: 2px solid #555;
 }
 
-.phb pre,
-  .phb code {
-  visibility: visible !important;
-  break-after: auto !important;
-  -moz-column-break-after: auto !important;
+.memorial-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.memorial-names {
+  margin-bottom: 30px;
+}
+
+.name-iron,
+  .name-bee {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 0.1em;
+}
+
+.name-sep {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  color: #666;
+  margin: 0 15px;
+  font-style: italic;
+}
+
+.memorial-dates {
+  font-family: 'Lora', serif;
+  color: #888;
+  font-size: 1.05em;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.memorial-dates p {
+  margin: 0 0 8px 0;
+}
+
+.memorial-epitaph {
+  margin-bottom: 50px;
+}
+
+.memorial-epitaph p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: #777;
+  font-size: 1.15em;
+  margin: 0;
+}
+
+.memorial-footer {
+  font-family: 'Cinzel', serif;
+  color: #666;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.memorial-footer p {
+  margin: 0 0 10px 0;
+}
+
+.memorial-line {
+  width: 60px;
+  height: 1px;
+  background: #555;
+  margin: 15px auto;
+}
+
+.memorial-sub {
+  font-size: 0.75em !important;
+  color: #555 !important;
+  letter-spacing: 0.15em !important;
 }
 
 .absolute {
