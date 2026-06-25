@@ -1,49 +1,32 @@
 {{ define "main" }}
-<article class="phb" id="p1">
-  <div style="text-align:center;margin-top:80px;">
-    <img src="{{ "images/avatar.png" | relURL }}" alt="Avatar" style="width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:inline-block;">
-  </div>
-  <h1 style="text-align:center;margin-top:30px;font-size:2.2em;">{{ .Site.Title }}</h1>
-  <p style="text-align:center;font-size:1.1em;margin-top:40px;">{{ .Site.Params.subtitle }}</p>
+<article class="memorial">
+  <div class="memorial-container">
+    <div class="avatar-wrapper">
+      <img src="{{ "images/avatar.png" | relURL }}" alt="1RON and B33" class="memorial-avatar">
+    </div>
 
-  <div style="margin-top:40px;">
-    <h2 style="border-bottom:2px solid #58180D;">Who Are You?</h2>
-    <p>Welcome, weary traveller. We are 1RON and B33 — two culinary explorers charting a course across the planes in search of legendary flavors. From the smoky taverns of the material plane to the ethereal banquet halls of the astral sea, every meal tells a story. This compendium is our journal: a collection of recipes and reviews from our adventures. Pull up a chair, pour yourself a flagon, and join us.</p>
- </div>
+    <h1 class="memorial-title">In Loving Memory</h1>
 
-  <div class="wide" style="margin-top:60px;">
-    <h2 style="border-bottom:2px solid #58180D;">Table of Contents</h2>
-    <div class="toc">
-      <h3 style="margin-top:20px;margin-bottom:8px;">Reviews</h3>
-      {{ $reviews := .Site.GetPage "/reviews" }}
-      {{ if $reviews.Pages }}
-        {{ range $reviews.Pages }}
-        <h4 style="margin-top:12px;margin-bottom:4px;">{{ .Title }}</h4>
-        <ul>
-          {{ range .Pages }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-        {{ end }}
-      {{ else }}
-        <p><em>No reviews yet. The quest continues.</em></p>
-      {{ end }}
+    <div class="memorial-names">
+      <span class="name-iron">1RON</span>
+      <span class="name-sep">&amp;</span>
+      <span class="name-bee">B33</span>
+    </div>
 
-      <h3 style="margin-top:20px;margin-bottom:8px;">Recipes</h3>
-      {{ $recipes := where .Site.RegularPages "Section" "recipes" }}
-      {{ if $recipes }}
-        <ul>
-          {{ range $recipes }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      {{ else }}
-        <p><em>No recipes yet. The cauldron is cold.</em></p>
-      {{ end }}
+    <div class="memorial-dates">
+      <p>Two culinary explorers whose journey across the planes has come to an end.</p>
+      <p>From the smoky taverns of the Material Plane to the ethereal banquet halls of the Astral Sea,<br>their legend lives on in every dish they crafted and every tale they told.</p>
+    </div>
+
+    <div class="memorial-epitaph">
+      <p>"The fire may fade, but the feast is eternal."</p>
+    </div>
+
+    <div class="memorial-footer">
+      <p>Rest in Peace</p>
+      <div class="memorial-line"></div>
+      <p class="memorial-sub">The Chef's Compendium &mdash; Final Edition</p>
     </div>
   </div>
-
-  <div class="footnote">&copy; {{ now.Format "2006" }} &mdash; First Edition</div>
-  <div class="pageNumber">1</div>
 </article>
 {{ end }}
