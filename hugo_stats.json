@@ -4,10 +4,11 @@
       "a",
       "article",
       "body",
-      "br",
       "div",
       "h1",
       "h2",
+      "h3",
+      "h4",
       "head",
       "hr",
       "html",
@@ -17,8 +18,6 @@
       "meta",
       "ol",
       "p",
-      "script",
-      "span",
       "table",
       "tbody",
       "td",
@@ -29,32 +28,15 @@
       "ul"
     ],
     "classes": [
-      "avatar-wrapper",
       "footnote",
-      "memorial",
-      "memorial-avatar",
-      "memorial-container",
-      "memorial-dates",
-      "memorial-epitaph",
-      "memorial-footer",
-      "memorial-line",
-      "memorial-names",
-      "memorial-names--single",
-      "memorial-scroll",
-      "memorial-sub",
-      "memorial-title",
-      "name-bee",
-      "name-iron",
-      "name-sep",
-      "name-skittles",
       "pageNumber",
       "phb",
-      "toc"
+      "toc",
+      "wide"
     ],
     "ids": [
       "ingredients",
       "instructions",
-      "memorial-scroll",
       "p1"
     ]
   }

@@ -1,9 +1,9 @@
 baseURL = 'https://1ronb33.au/'
 languageCode = 'en-us'
-title = "In Loving Memory of 1RON & B33"
+title = "The Chef's Compendium"
 
 [params]
-  subtitle = "Rest in Peace — The Chef's Compendium"
+  subtitle = "A blog following the culinary adventures of 1RON and B33 from the Material Plane to the Astral Sea. "
 
 [build]
   writeStats = true

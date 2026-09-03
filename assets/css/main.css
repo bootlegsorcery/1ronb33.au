@@ -1,149 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
-body {
-  background-color: #0d0d0d;
-  margin: 0;
-  padding: 0;
-  overflow-x: auto;
-}
+@layer base {
+  body {
+    background-color: #2e2212;
+  }
 
-.memorial-scroll {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  width: max-content;
-  scroll-snap-type: x mandatory;
-}
+  .phb {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 279.4mm;
+    overflow: visible !important;
+    column-count: 1 !important;
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+    column-width: auto !important;
+    -webkit-column-width: auto !important;
+    -moz-column-width: auto !important;
+    font-size: .40cm !important;
+  }
 
-.memorial {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
+  .phb h1 {
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    -moz-column-span: none !important;
+    font-size: 1.2cm !important;
+  }
 
-.memorial-container {
-  max-width: 700px;
-  width: 100%;
-  text-align: center;
-  padding: 60px 40px;
-  border: 1px solid #444;
-  background: #1a1a1a;
-}
+  .phb h2 {
+    font-size: .88cm !important;
+  }
 
-.avatar-wrapper {
-  margin-bottom: 40px;
-}
+  .phb h3 {
+    font-size: .66cm !important;
+  }
 
-.memorial-avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 20%;
-  display: inline-block;
-  filter: grayscale(100%);
-  border: 2px solid #555;
-}
+  .phb h4 {
+    font-size: .57cm !important;
+  }
 
-.memorial-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.6em;
-  font-weight: 400;
-  color: #999;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin: 0 0 30px 0;
-}
+  .phb h5 {
+    font-size: .53cm !important;
+  }
 
-.memorial-names {
-  margin-bottom: 30px;
-}
+  .phb h1+p::first-letter {
+    float: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+  }
 
-.name-iron,
-.name-bee {
-  font-family: 'Cinzel', serif;
-  font-size: 3em;
-  font-weight: 700;
-  color: #ccc;
-  letter-spacing: 0.1em;
-}
+  .phb li,
+  .phb ul,
+  .phb ol {
+    font-size: .40cm !important;
+    line-height: 1.5em !important;
+  }
 
-.name-sep {
-  font-family: 'Lora', serif;
-  font-size: 2em;
-  color: #666;
-  margin: 0 15px;
-  font-style: italic;
-}
+  .phb blockquote p,
+  .phb blockquote ul,
+  .phb hr+blockquote ul {
+    font-size: .40cm !important;
+    line-height: 1.5em !important;
+  }
 
-.name-skittles {
-  font-family: 'Cinzel', serif;
-  font-size: 3em;
-  font-weight: 700;
-  color: #ccc;
-  letter-spacing: 0.1em;
-}
+  .phb .footnote {
+    font-size: 1em !important;
+  }
 
-.memorial-dates {
-  font-family: 'Lora', serif;
-  color: #888;
-  font-size: 1.05em;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
+  .phb .pageNumber {
+    font-size: 1.1em !important;
+  }
 
-.memorial-dates p {
-  margin: 0 0 8px 0;
-}
+  .phb .wide {
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    -moz-column-span: none !important;
+  }
 
-.memorial-epitaph {
-  margin-bottom: 50px;
-}
+  .phb .toc a {
+    font-size: 1.1em !important;
+  }
 
-.memorial-epitaph p {
-  font-family: 'Lora', serif;
-  font-style: italic;
-  color: #777;
-  font-size: 1.15em;
-  margin: 0;
-}
+  .phb .toc ul {
+    list-style-type: disc !important;
+    padding-left: 1.5em !important;
+  }
 
-.memorial-footer {
-  font-family: 'Cinzel', serif;
-  color: #666;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+  .phb .spellList {
+    column-count: 2 !important;
+    -webkit-column-count: 2 !important;
+    -moz-column-count: 2 !important;
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    -moz-column-span: none !important;
+  }
 
-.memorial-footer p {
-  margin: 0 0 10px 0;
-}
+  .phb .spellList p,
+  .phb .spellList ul {
+    font-size: .40cm !important;
+  }
 
-.memorial-line {
-  width: 60px;
-  height: 1px;
-  background: #555;
-  margin: 15px auto;
-}
+  .phb .classTable {
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    -moz-column-span: none !important;
+  }
 
-.memorial-sub {
-  font-size: 0.75em !important;
-  color: #555 !important;
-  letter-spacing: 0.15em !important;
+  .phb table {
+    font-size: 11pt !important;
+  }
+
+  .phb table th:first-child,
+  .phb table td:first-child {
+    width: 11em;
+    white-space: nowrap;
+  }
+
+  .phb table th:nth-child(2),
+  .phb table td:nth-child(2) {
+    width: 4em;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .phb table th:nth-child(3),
+  .phb table td:nth-child(3) {
+    width: auto;
+  }
+
+  .phb hr {
+    visibility: hidden;
+  }
+
+  .phb pre,
+  .phb code {
+    visibility: visible !important;
+    -webkit-column-break-after: auto !important;
+    break-after: auto !important;
+    -moz-column-break-after: auto !important;
+  }
 }
