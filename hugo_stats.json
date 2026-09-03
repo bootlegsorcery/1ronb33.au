@@ -17,6 +17,7 @@
       "meta",
       "ol",
       "p",
+      "script",
       "span",
       "table",
       "tbody",
@@ -38,11 +39,14 @@
       "memorial-footer",
       "memorial-line",
       "memorial-names",
+      "memorial-names--single",
+      "memorial-scroll",
       "memorial-sub",
       "memorial-title",
       "name-bee",
       "name-iron",
       "name-sep",
+      "name-skittles",
       "pageNumber",
       "phb",
       "toc"
@@ -50,6 +54,7 @@
     "ids": [
       "ingredients",
       "instructions",
+      "memorial-scroll",
       "p1"
     ]
   }

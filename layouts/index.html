@@ -1,32 +1,79 @@
 {{ define "main" }}
-<article class="memorial">
-  <div class="memorial-container">
-    <div class="avatar-wrapper">
-      <img src="{{ "images/avatar.png" | relURL }}" alt="1RON and B33" class="memorial-avatar">
-    </div>
+<div class="memorial-scroll" id="memorial-scroll">
+  <article class="memorial">
+    <div class="memorial-container">
+      <div class="avatar-wrapper">
+        <img src="{{ "images/avatar.png" | relURL }}" alt="1RON and B33" class="memorial-avatar">
+      </div>
 
-    <h1 class="memorial-title">In Loving Memory</h1>
+      <h1 class="memorial-title">In Loving Memory</h1>
 
-    <div class="memorial-names">
-      <span class="name-iron">1RON</span>
-      <span class="name-sep">&amp;</span>
-      <span class="name-bee">B33</span>
-    </div>
+      <div class="memorial-names">
+        <span class="name-iron">1RON</span>
+        <span class="name-sep">&amp;</span>
+        <span class="name-bee">B33</span>
+      </div>
 
-    <div class="memorial-dates">
-      <p>Two culinary explorers whose journey across the planes has come to an end.</p>
-      <p>From the smoky taverns of the Material Plane to the ethereal banquet halls of the Astral Sea,<br>their legend lives on in every dish they crafted and every tale they told.</p>
-    </div>
+      <div class="memorial-dates">
+        <p>Two culinary explorers whose journey across the planes has come to an end.</p>
+        <p>From the smoky taverns of the Material Plane to the ethereal banquet halls of the Astral Sea,<br>their legend lives on in every dish they crafted and every tale they told.</p>
+      </div>
 
-    <div class="memorial-epitaph">
-      <p>"The fire may fade, but the feast is eternal."</p>
-    </div>
+      <div class="memorial-epitaph">
+        <p>"The fire may fade, but the feast is eternal."</p>
+      </div>
 
-    <div class="memorial-footer">
-      <p>Rest in Peace</p>
-      <div class="memorial-line"></div>
-      <p class="memorial-sub">The Chef's Compendium &mdash; Final Edition</p>
+      <div class="memorial-footer">
+        <p>Rest in Peace</p>
+        <div class="memorial-line"></div>
+        <p class="memorial-sub">The Chef's Compendium &mdash; Final Edition</p>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+
+  <article class="memorial">
+    <div class="memorial-container">
+      <div class="avatar-wrapper">
+        <img src="{{ "images/skittles.png" | relURL }}" alt="Skittles" class="memorial-avatar">
+      </div>
+
+      <h1 class="memorial-title">In Loving Memory</h1>
+
+      <div class="memorial-names memorial-names--single">
+        <span class="name-skittles">Skittles</span>
+      </div>
+
+      <div class="memorial-dates">
+        <p>A loyal daughter to The Family, to the very end.</p>
+        <p>Through every adventure, every quiet moment, and every shared meal,<br>her spirit remains woven into the fabric of our lives.</p>
+      </div>
+
+      <div class="memorial-epitaph">
+        <p>"Gone from our sight, but never from our hearts."</p>
+      </div>
+
+      <div class="memorial-footer">
+        <p>Rest in Peace</p>
+        <div class="memorial-line"></div>
+        <p class="memorial-sub">Forever loved, forever missed</p>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+(function() {
+  var scroll = document.getElementById('memorial-scroll');
+  var panels = scroll.querySelectorAll('.memorial');
+  var current = 0;
+  var total = panels.length;
+
+  function cycle() {
+    current = (current + 1) % total;
+    panels[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+  }
+
+  setInterval(cycle, 30000);
+})();
+</script>
 {{ end }}

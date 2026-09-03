@@ -1,131 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+html {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
 
-@layer base {
-  body {
-    background-color: #0d0d0d;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+body {
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
 
-  .memorial {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
+.memorial-scroll {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: max-content;
+  scroll-snap-type: x mandatory;
+}
 
-  .memorial-container {
-    max-width: 700px;
-    width: 100%;
-    text-align: center;
-    padding: 60px 40px;
-    border: 1px solid #444;
-    background: #1a1a1a;
-  }
+.memorial {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
 
-  .avatar-wrapper {
-    margin-bottom: 40px;
-  }
+.memorial-container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding: 60px 40px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+}
 
-  .memorial-avatar {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 20%;
-    display: inline-block;
-    filter: grayscale(100%);
-    border: 2px solid #555;
-  }
+.avatar-wrapper {
+  margin-bottom: 40px;
+}
 
-  .memorial-title {
-    font-family: 'Cinzel', serif;
-    font-size: 1.6em;
-    font-weight: 400;
-    color: #999;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin: 0 0 30px 0;
-  }
+.memorial-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: inline-block;
+  filter: grayscale(100%);
+  border: 2px solid #555;
+}
 
-  .memorial-names {
-    margin-bottom: 30px;
-  }
+.memorial-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
 
-  .name-iron,
-  .name-bee {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
-    font-weight: 700;
-    color: #ccc;
-    letter-spacing: 0.1em;
-  }
+.memorial-names {
+  margin-bottom: 30px;
+}
 
-  .name-sep {
-    font-family: 'Lora', serif;
-    font-size: 2em;
-    color: #666;
-    margin: 0 15px;
-    font-style: italic;
-  }
+.name-iron,
+.name-bee {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 0.1em;
+}
 
-  .memorial-dates {
-    font-family: 'Lora', serif;
-    color: #888;
-    font-size: 1.05em;
-    line-height: 1.8;
-    margin-bottom: 40px;
-  }
+.name-sep {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  color: #666;
+  margin: 0 15px;
+  font-style: italic;
+}
 
-  .memorial-dates p {
-    margin: 0 0 8px 0;
-  }
+.name-skittles {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 0.1em;
+}
 
-  .memorial-epitaph {
-    margin-bottom: 50px;
-  }
+.memorial-dates {
+  font-family: 'Lora', serif;
+  color: #888;
+  font-size: 1.05em;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
 
-  .memorial-epitaph p {
-    font-family: 'Lora', serif;
-    font-style: italic;
-    color: #777;
-    font-size: 1.15em;
-    margin: 0;
-  }
+.memorial-dates p {
+  margin: 0 0 8px 0;
+}
 
-  .memorial-footer {
-    font-family: 'Cinzel', serif;
-    color: #666;
-    font-size: 0.9em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+.memorial-epitaph {
+  margin-bottom: 50px;
+}
 
-  .memorial-footer p {
-    margin: 0 0 10px 0;
-  }
+.memorial-epitaph p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: #777;
+  font-size: 1.15em;
+  margin: 0;
+}
 
-  .memorial-line {
-    width: 60px;
-    height: 1px;
-    background: #555;
-    margin: 15px auto;
-  }
+.memorial-footer {
+  font-family: 'Cinzel', serif;
+  color: #666;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
-  .memorial-sub {
-    font-size: 0.75em !important;
-    color: #555 !important;
-    letter-spacing: 0.15em !important;
-  }
+.memorial-footer p {
+  margin: 0 0 10px 0;
+}
+
+.memorial-line {
+  width: 60px;
+  height: 1px;
+  background: #555;
+  margin: 15px auto;
+}
+
+.memorial-sub {
+  font-size: 0.75em !important;
+  color: #555 !important;
+  letter-spacing: 0.15em !important;
 }

@@ -1,4 +1,6 @@
-*, ::before, ::after {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -52,7 +54,7 @@
   --tw-contain-style:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -554,24 +556,53 @@ video {
   display: none;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.block{
+  display: block;
+}
+
+.inline{
+  display: inline;
+}
+
+.table{
+  display: table;
+}
+
+html {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0d0d0d;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  overflow-x: auto;
+}
+
+.memorial-scroll {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  min-height: 100vh;
+  width: -moz-max-content;
+  width: max-content;
+  scroll-snap-type: x mandatory;
 }
 
 .memorial {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
   box-sizing: border-box;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .memorial-container {
@@ -615,7 +646,7 @@ body {
 }
 
 .name-iron,
-  .name-bee {
+.name-bee {
   font-family: 'Cinzel', serif;
   font-size: 3em;
   font-weight: 700;
@@ -629,6 +660,14 @@ body {
   color: #666;
   margin: 0 15px;
   font-style: italic;
+}
+
+.name-skittles {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 0.1em;
 }
 
 .memorial-dates {
@@ -678,16 +717,4 @@ body {
   font-size: 0.75em !important;
   color: #555 !important;
   letter-spacing: 0.15em !important;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.block {
-  display: block;
-}
-
-.table {
-  display: table;
 }
